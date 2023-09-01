@@ -1,0 +1,28 @@
+<div>
+    <a href="/posts/meusposts">Voltar</a>
+    <h1>Criar um Post</h1>
+
+    <form action="/posts/criar" method="POST">
+        <div class="form-control">
+            <label for="title">Título</label>
+            <input type="text" name="title" placeholder="Digite um título">
+        </div>
+
+        <div class="form-control">
+            <label for="game">Jogo</label>
+            <input type="text" name="game" placeholder="Digite o nome do jogo">
+        </div>
+
+        <div class="form-control">
+            <label for="horario">Disponibilidade</label>
+            <input type="text" name="horario" placeholder="Digite sua disponibilidade para jogar">
+        </div>
+
+        <div class="form-control">
+            <label for="desc">Descrição</label>
+            <input type="text" name="desc" placeholder="Crie uma descrição para a postagem">
+        </div>
+
+        <input type="submit" value="Criar post">
+    </form>
+</div>
