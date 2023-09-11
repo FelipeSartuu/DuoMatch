@@ -4,8 +4,8 @@ const User = require("./User");
 
 const Post = db.define("Post", {
     title: {
-    type: DataTypes.STRING,
-    allowNull: false, // Mudança: use "allowNull" em vez de "require"
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     game: {
         type: DataTypes.STRING,
@@ -23,6 +23,6 @@ const Post = db.define("Post", {
 
 // Associações
 Post.belongsTo(User); // Um Post pertence a um User
-User.hasMany(Post);   // Um User tem muitos Posts
+User.hasMany(Post, { foreignKey: 'userId' }); // Um User tem muitos Posts, 'userId' é o nome da coluna na tabela Post que faz referência à tabela User
 
 module.exports = Post;

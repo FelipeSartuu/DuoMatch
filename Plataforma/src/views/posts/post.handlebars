@@ -1,0 +1,15 @@
+{{#each posts}}
+    <a href="/">Voltar</a>
+
+
+    <h1>{{this.title}}</h1>
+    <h2>Jogo: {{this.game}}</h2>
+    <p>{{this.desc}}</p>
+    <br>
+
+    <p>Discord: {{this.User.contact}}</p>
+    <p>Idade: {{this.User.idade}}</p>
+    <p>Sex: {{this.User.sex}}</p>
+    <br>
+    <hr>
+{{/each}}

@@ -1,2 +1,26 @@
-<h1>Meu post</h1>
+<h1>Meus posts</h1>
 <a href="/posts/criar">Criar um post</a>
+
+<hr>
+<br>
+
+{{#if posts}}
+    <ul>
+        {{#each posts}}
+            <li>
+                <h2>{{this.title}}</h2>
+                <p>{{this.desc}}</p>
+                <a href="/posts/edit/{{this.id}}">Editar</a>
+                <form action="/posts/remove" method="POST">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                        <input type="submit" value="Excluir">
+                </form>
+            </li>
+            <hr>
+        {{/each}}
+    </ul>
+{{/if}}
+
+{{#if emptyPosts}}
+    <p>Ainda não há nenhum pensamento seu, comece a criar <a href="/posts/criar">Por aqui!</a></p>
+{{/if}}

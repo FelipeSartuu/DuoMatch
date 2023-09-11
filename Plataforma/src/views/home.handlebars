@@ -1,1 +1,48 @@
-<h1>Aqui serão exibidos todos os posts!</h1>
+{{#if search}}
+    <h1>Você está buscando por: <span>{{search}}</span></h1>
+    {{#if postsQty}}
+        <p>Total de resultados: <span>{{postsQty}}</span></p>
+    {{else}}
+        <p>Nenhum pensamento foi encontrado para o termo: <span>{{search}}</span></p>
+    {{/if}}
+
+    {{else}}    
+        <h1>Aqui serão exibidos todos os POSTS</h1>
+{{/if}}
+
+    <form action="/" method="GET">
+        <input type="text" name="search" placeholder="Está buscando por algo?">
+        <input type="submit" class="btn" value="buscar">
+    </form>
+
+    <span>Ordenar por:</span>
+    
+    <form action="/" method="get">
+            <input type="hidden" name="search" value="{{this.search}}">
+            <input type="hidden" name="order" value="new">
+        <button type="submit"><i class="bi bi-arrow-up"></i></button>
+    </form>
+
+    <form action="/" method="get">
+            <input type="hidden" name="search" value="{{this.search}}">
+            <input type="hidden" name="order" value="old">
+        <button type="submit"><i class="bi bi-arrow-down"></i></button>
+    </form>
+    <a href="/">Limpar</a>
+    <br> <br>
+
+{{#each posts}}
+    <a href="/post/{{this.id}}">
+        <figure>
+            <blockquote>
+                {{this.title}}
+            </blockquote>
+
+            <figcaption>
+                Autor: <span>{{this.User.name}}</span>
+            </figcaption>
+        </figure>
+    </a>
+    <br>
+    <hr>
+{{/each}}
