@@ -3,7 +3,7 @@ const criadores = [
     {
       nome: "Alexandre Cintra",
       img: "assets/images/background1.jpg",
-      biografia: "Biografia do Criador 1",
+      biografia: "Meu nome é Alexandre Cintra, tenho 17 anos, nasci em São Paulo, gosto de jogar no PC, gosto de carros e atualmente estou envolvido no ramo do Empreendedorismo com Marketing Digital. No projeto tive participações na organização de informações e idéias.",
     },
     {
       nome: "Caio Raja",
@@ -33,7 +33,7 @@ const criadores = [
     {
       nome: "Rafael Cruz",
       img: "assets/images/background7.jpg",
-      biografia: "Biografia do Criador 7",
+      biografia: "Sou o Rafael Cruz, tenho 16 anos, nasci em São Paulo, no Tatuapé Zona Leste, gosto de automobilismo e design. No projeto do DuoMatch fui responsável pelo design do projeto, utilizo para praticar para no futuro trabalhar com design",
     },
   ];
   
