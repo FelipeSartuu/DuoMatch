@@ -23,6 +23,6 @@ const Post = db.define("Post", {
 
 // Associações
 Post.belongsTo(User); // Um Post pertence a um User
-User.hasMany(Post, { foreignKey: 'userId' }); // Um User tem muitos Posts, 'userId' é o nome da coluna na tabela Post que faz referência à tabela User
+User.hasMany(Post); // Um User tem muitos Post
 
 module.exports = Post;

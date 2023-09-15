@@ -2,16 +2,18 @@ const express = require('express')
 const router = express.Router()
 const postsController = require("../controllers/PostsController")
 
+//Helper
+const checkAuth = require("../helpers/auth").checkAuth
 
 
-router.get("/meusposts", postsController.mypost)
+router.get("/meusposts", checkAuth, postsController.mypost)
 
-router.get("/criar", postsController.createPost)
-router.post("/criar", postsController.createPostSave)
+router.get("/criar", checkAuth, postsController.createPost)
+router.post("/criar", checkAuth, postsController.createPostSave)
 
-router.get("/edit/:id", postsController.editPost)
-router.post("/edit", postsController.saveEditPost)
+router.get("/edit/:id", checkAuth, postsController.editPost)
+router.post("/edit", checkAuth, postsController.saveEditPost)
 
-router.post("/remove", postsController.removePost)
+router.post("/remove", checkAuth, postsController.removePost)
 
 module.exports = router

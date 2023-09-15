@@ -3,7 +3,7 @@
     {{#if postsQty}}
         <p>Total de resultados: <span>{{postsQty}}</span></p>
     {{else}}
-        <p>Nenhum pensamento foi encontrado para o termo: <span>{{search}}</span></p>
+        <p>Nenhum post foi encontrado para o termo: <span>{{search}}</span></p>
     {{/if}}
 
     {{else}}    
@@ -40,6 +40,10 @@
 
             <figcaption>
                 Autor: <span>{{this.User.name}}</span>
+            </figcaption>
+
+            <figcaption>
+                Jogo: <span>{{this.game}}</span>
             </figcaption>
         </figure>
     </a>
