@@ -55,7 +55,19 @@ module.exports = class HomeController {
             },
             raw: true
         })  
+
+        const novosPosts = posts.map(post => ({ 
+            ...post, 
+            user: { name: post['User.name'], 
+            contact:  post['User.contact'], 
+            age: post['User.age'],
+            sex: post["User.sex"],
+        }}))
+
         
-        res.render("posts/post", {posts: posts})
+        console.log(novosPosts)
+
+
+        res.render('posts/post', { posts: novosPosts})
     }
 }
