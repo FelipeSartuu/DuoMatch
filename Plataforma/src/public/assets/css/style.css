@@ -1,5 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 * {
     margin: 0;
     bottom: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #28294b;
+}
+
+/* logo do site na navbar */
+#meu-pau-logo img {                 
+    max-width: 50px;
+    max-height: 50px;
+}
+#meu-pau-logo {
+    display: flex;
+    flex-grow: 2; 
+}
+
+
+
+/* parte de login e register da navbar */
+.meu-pau ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(45, 8, 98, 0.846);
+    list-style: none;
+    align-items: center;
+}
+.meu-pau a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Roboto';
+    color: black;
+    
+} 
+.meu-pau-login {
+    margin-left: 30px;
+}
+
+
+
+/* container principal da tela de LOGIN e de REGISTER */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    flex-direction: column;
+   
+}
+/* Titulo tanto do LOGIN e do REGISTER */
+.auth-container h2 {
+    padding: 10px;
+    padding-top: 20px;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 6px -6px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+/* div q engloba tudo da Tela de REGISTER */
+.pauzinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
+    background-color: rgba(171, 185, 224, 0.3);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* container que engloba tudo que serve pra se registrar tirando o botao de cadastro e ja tem conta */
+.container-registrar {
+    padding: 20px;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+
+/* Controle dos formularios das telas de LOGIN e de REGISTER */
+.form-control {
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Id do formulario de masculino/Feminino */
+#form-control {
+    padding-bottom: 15px;
+}
+/* divs pra estilizar o os botoes do masculino/feminino */
+.radio-wrapper input[type="radio"] {
+    appearance: none;
+    border: 1px solid #000000;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: white;
+   
+}
+.radio-wrapper input[type="radio"]:checked {
+    border: 3px solid #7a0baeda;
+}
+#radio-feminino input {
+    margin-left: 7px;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Uma div usada pra colocar os itens do formularios lado a lado */
+.form-quebra {
+    display: flex;
+}
+/* Uma div usada pra colocar os itens do formularios lado a lado, divs filhos que separam em 2 conteudos */
+.form-quebra1 {
+    padding-left: 30px;
+}
+
+
+
+/* Estilização do Botão de cadastrar */
+.cadastrar-bottom {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.cadastrar-bottom input {
+    margin-bottom: 10px;
+    border-radius: 9px;
+    border: none;
+    padding: 5px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    cursor: pointer;
+}
+.cadastrar-bottom input:hover {
+    cursor: pointer;
+}
+.cadastrar-bottom a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Div que engloba tudo sobre a tela de LOgin */
+.pauzao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
+    background-color: rgba(171, 185, 224, 0.3);
+    padding: 20px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* subdiv da tela de login */
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.container-login label {
+    padding-top: 10px;
+}
+
+
+/* div pra separar o botao e o n tem conta do email e senha */
+.container-divisao-login {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.container-divisao-login input {
+    margin-bottom: 10px;
+    border-radius: 9px;
+    border: none;
+    padding: 3px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.195);
+}
+
+
+
+
+/* usado pra estilizar todos os inputs do LOGIN e do REGISTER */
+.input-wrapper  {
+    background-color: rgba(255, 255, 255, 0.527);
+    padding: 7px;
+    border-radius: 14px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 5.5px 4px rgba(0, 0, 0, 0.06),
+    0 10px 8px rgba(0, 0, 0, 0.12);
+}
+.input-wrapper input {
+    width: 91%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: text;
+}
+.input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.input-wrapper input:focus-visible {
+    outline: none;
+}
+.input-wrapper i {
+    border-right: 2px solid white;
+    padding-right: 5px;
+}
+
+
+
+.form-control label {
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+i {
+    margin: 2px;
+}
+
+
+
+
+
+
+/* estilizacao da pagina home */
+/* div q engloba tudo da pagina home */
+.container-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+/* Uma div sem nada somente utilizada pra centralizar a barra de pesquina no meio da tela */
+.container-nada {
+    display: flex;
+    flex-grow: 1;
+}
+
+
+
+
+/* container que contem a barra de pesquisa */
+.container-pesquisa {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    padding-left: 5%;
+}
+/* h1 que fica em cima da barra de pesquisa */
+.container-pesquisa h1 {
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 35px;
+}
+/* span usado pra destacar a palavra POSTS do h1 */
+#span-posts {
+    color: aqua;
+}
+/* IDS usados pra estilizar a propria barra de pesquisa */
+#container-inputs {
+    display: flex;
+    padding-top: 15px;
+    border-top: 2px solid white;
+    margin: 10px;
+    gap: 5px;
+    align-items: center;
+}
+#input-wrapper {
+    background-color: rgba(255, 255, 255, 0.527);
+    padding: 7px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 5.5px 4px rgba(0, 0, 0, 0.06),
+    0 10px 8px rgba(0, 0, 0, 0.12);
+    width: 400px;
+}
+#input-wrapper input {
+    width: 91%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: text;
+}
+#input-wrapper i {
+    border-left: 2px solid rgba(255, 255, 255, 0.565);
+    padding-left: 5px;
+}
+#input-wrapper button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+#input-wrapper input:focus-visible {
+    outline: none;
+}
+#input-wrapper:hover {
+    box-shadow: 0px 0px 4px 2px blue;    
+}
+
+
+
+
+
+/* container que fica a partde de ordenar os posts, ta la no canto direito */
+.container-ordenar {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: white;
+}
+#seila {
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 3px;
+}
+/* container do botao */
+.container-ordenar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

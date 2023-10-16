@@ -1,20 +1,35 @@
 <div class="auth-container">
-    <h2>Entrar</h2>
+    <div class="pauzao">  
+         <h2>Entrar</h2>
+        <div class="container-login">
+            <div>
+                <form action="/login" method="POST">
+                <div class="form-control">
+                    <label for="email">E-mail:</label>
+                    <div class="input-wrapper">
+                         <i class="fa-solid fa-envelope"></i>
+                         <input type="email" name="email" placeholder="Digite seu e-mail">
+                    </div>
+                    
+                </div>
 
-    <form action="/login" method="POST">
-        <div class="form-control">
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" placeholder="Digite seu e-mail">
+                <div class="form-control">
+                    <label for="password">Senha:</label>
+                    <div class="input-wrapper">
+                         <i class="fa-solid fa-lock"></i>
+                         <input type="password" name="password" placeholder="Digite sua senha...">
+                    </div>
+                   
+ 
+                     <div class="container-divisao-login">
+                        <input type="submit" value="Entrar">
+                        <p>NÃ£o tem uma conta? <a href="/register">Clique aqui!</a></p>  
+                    
+                     </div>
+                </div>
+            </div>    
         </div>
-
-        <div class="form-control">
-            <label for="password">Senha:</label>
-            <input type="password" name="password" placeholder="Digite sua senha">
-        </div>
-
-        <input type="submit" value="Entrar">
-        <p>Não tem uma conta? <a href="/register">Clique aqui!</a></p>
-    </form>
-
-
+       
+            </form>
+    </div>
 </div>

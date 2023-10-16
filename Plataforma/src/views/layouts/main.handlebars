@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <title>DuoMatch</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="meu-pau">
             <ul>
-                <li><a href="/"><img src="" alt="logo"></a></li>
+                <li id="meu-pau-logo"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></li>
                 {{#if session.userid}}
                     <li><a href="/posts/meusposts">Meus Posts</a></li>
                     <li><a href="/logout">Sair</a></li>
                 {{else}}
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Registrar</a></li>
+                    <li class="meu-pau-login"><a href="/login">Login</a></li>
+                    <li class="meu-pau-login"><a href="/register">Registrar</a></li>
                 {{/if}}
 
             </ul>

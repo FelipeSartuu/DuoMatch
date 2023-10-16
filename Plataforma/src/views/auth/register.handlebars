@@ -1,64 +1,103 @@
 <div class="auth-container">
-    <h2>Registrar</h2>
-    <form action="/register" method="POST">
+    <div class="pauzinho">
+        <h2>Registrar</h2>
+            <div class="container-registrar"> 
+                <form action="/register" method="POST">
+                <div class="form-quebra">
+                    <div class="form-quebra1">   
+                       <div>
+                                <div class="form-control">
+                                    <label for="name">Nome:</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-user"></i>
+                                        <input type="text" name="name" placeholder="Digite seu nome" required>
+                                    </div>
+                                    
+                                </div>
+                            </div>
 
-    <div>
-        <div class="form-control">
-            <label for="name">Nome:</label>
-            <input type="text" name="name" placeholder="Digite seu nome" required>
-        </div>
+                            <div>
+                                <div class="form-control">
+                                    <label for="name">Idade</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        <input type="number" name="age" placeholder="Digite sua idade" required>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-control">
+                                    <label for="contact">Discord</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-brands fa-discord" style="color: #ffffff;"></i>
+                                        <input type="text" name="contact" placeholder="Digite seu discord" required>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div>
+                                <div id="form-control">
+                                    <label class="radio-wrapper">
+                                        Masculino
+                                        <input type="radio" name="sex" value="masculino" required>
+                                    </label>
+                                    </br>
+                                    <label class="radio-wrapper" id="radio-feminino">
+                                        Feminino
+                                        <input type="radio" name="sex" value="feminino" required>
+                                    </label>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    
+                    <div class="form-quebra1"> 
+                        <div>
+                            <div class="form-control">
+                                <label for="email">E-mail:</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-control">
+                                <label for="password">Senha:</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" name="password" placeholder="Digite a sua senha" required>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                         <div>
+                            <div class="form-control">
+                                <label for="confirmpassword">Confirmar Senha:</label>
+                                <div class="input-wrapper">
+                                  <i class="fa-solid fa-lock"></i>
+                                  <input type="password" name="confirmpassword" placeholder="Confirme a sua senha" required>  
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+                <div class="cadastrar-bottom">
+                    <input type="submit" value="Cadastrar">
+                    <p>Já tem conta? <a href="/login">Clique aqui!</a></p>
+                </div>       
+                    </form>
     </div>
-
-    <div>
-        <div class="form-control">
-            <label for="name">Idade</label>
-            <input type="number" name="age" placeholder="Digite sua idade" required>
-        </div>
-    </div>
-
-    <div>
-        <div class="form-control">
-            <label>
-                Masculino
-                <input type="radio" name="sex" value="masculino" required>
-            </label>
-            <label>
-                Feminino
-                <input type="radio" name="sex" value="feminino" required>
-            </label>
-        </div>
-    </div>
-
-    <div>
-        <div class="form-control">
-            <label for="contact">Discord</label>
-            <input type="text" name="contact" placeholder="Digite seu discord" required>
-        </div>
-    </div>
-
-    <div>
-        <div class="form-control">
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" placeholder="Digite seu e-mail" required>
-        </div>
-    </div>
-
-    <div>
-        <div class="form-control">
-            <label for="password">Senha:</label>
-            <input type="password" name="password" placeholder="Digite a sua senha" required>
-        </div>
-    </div>
-
-    <div>
-        <div class="form-control">
-            <label for="confirmpassword">Confirmar Senha:</label>
-            <input type="password" name="confirmpassword" placeholder="Confirme a sua senha" required>
-        </div>
-    </div>
-
-    <input type="submit" value="Cadastrar">
-    <p>Já tem conta? <a href="/login">Clique aqui!</a></p>
-
-    </form>
+    
+   
 </div>
