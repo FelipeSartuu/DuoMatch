@@ -1,72 +1,80 @@
 <div class="container-home">
-    <div class="container-nada">
+    <div class="top-container">
+        
 
-    </div>
-    <div class="container-pesquisa">
-        {{#if search}}
-        <h1>Você está buscando por: <span>{{search}}</span></h1>
-        {{#if postsQty}}
-            <p>Total de resultados: <span>{{postsQty}}</span></p>
-        {{else}}
-            <p>Nenhum post foi encontrado para o termo: <span>{{search}}</span></p>
-        {{/if}}
 
-        {{else}}    
-            <h1>AQUI SERÃO EXIBIDOS TODOS OS <span id="span-posts"> POSTS </span></h1>
-    {{/if}}
-    
-        <form action="/" method="GET">
-            <div id="container-inputs">
-                <div id="input-wrapper">
-                    <input type="text" name="search" placeholder="Está buscando por algo?...">
-                    <button type="submit" class="btn" value="BUSCAR"> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button>
+        <div class="container-pesquisa">
+            {{#if search}}
+            <h1>Você está buscando por: <span>{{search}}</span></h1>
+            {{#if postsQty}}
+                <p>Total de resultados: <span>{{postsQty}}</span></p>
+            {{else}}
+                <p>Nenhum post foi encontrado para o termo: <span>{{search}}</span></p>
+            {{/if}}
+
+            {{else}}    
+                <h1>AQUI SERÃO EXIBIDOS TODOS OS <span id="span-posts"> POSTS </span></h1>
+            {{/if}} 
+            <div class="input-order-container"> 
+                <form action="/" method="GET">
+                    <div id="container-inputs">
+                        <div id="input-wrapper">
+                            <input type="text" name="search" placeholder="Está buscando por algo?" class="input">
+                            <button type="submit" class="btn" value="BUSCAR"> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button>
+                        </div>
+                    
+                    </div>
+                </form>
+
+                <div class="container-ordenar">
+                    <div id="seila">
+                        <span>Ordenar por:</span>
+                        
+                        <form action="/" method="get">
+                                <input type="hidden" name="search" value="{{this.search}}">
+                                <input type="hidden" name="order" value="new">
+                            <button type="submit"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
+                        </form>
+
+                        <form action="/" method="get">
+                                <input type="hidden" name="search" value="{{this.search}}">
+                                <input type="hidden" name="order" value="old">
+                            <button type="submit"><i class="fa-solid fa-arrow-up fa-rotate-180" style="color: #ffffff;"></i></button>
+                        </form>
+                        <a href="/"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></a>
+                        <br> <br>
+                    </div>
                 </div>
-               
+
             </div>
-            
-            
-        </form>
-    </div>
-    
-    <div class="container-ordenar">
-        <div id="seila">
-             <span>Ordenar por:</span>
-            
-            <form action="/" method="get">
-                    <input type="hidden" name="search" value="{{this.search}}">
-                    <input type="hidden" name="order" value="new">
-                <button type="submit"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
-            </form>
-
-            <form action="/" method="get">
-                    <input type="hidden" name="search" value="{{this.search}}">
-                    <input type="hidden" name="order" value="old">
-                <button type="submit"><i class="fa-solid fa-arrow-up fa-rotate-180" style="color: #ffffff;"></i></button>
-            </form>
-            <a href="/"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></a>
-            <br> <br>
         </div>
-           
+        
+        
 
-        {{#each posts}}
-            <a href="/post/{{this.id}}">
-                <figure>
-                    <blockquote>
-                        {{this.title}}
-                    </blockquote>
+    </div>   
+        <section class="posts-container">
+            <div class="posts-area"> 
+                {{#each posts}}
+                <a href="/post/{{this.id}}">
+                    <div class="post-individual">
+                            <figure>
+                                <blockquote class="post-title">
+                                    {{this.title}}
+                                </blockquote>
 
-                    <figcaption>
-                        Autor: <span>{{this.User.name}}</span>
-                    </figcaption>
+                                <figcaption class="post-game">
+                                    <span>{{this.game}}</span>
+                                </figcaption>
 
-                    <figcaption>
-                        Jogo: <span>{{this.game}}</span>
-                    </figcaption>
-                </figure>
-            </a>
-            <br>
-            <hr>
-        {{/each}}
-    </div>
+                                <figcaption class="post-autor">
+                                    Player: <span>{{this.User.name}}</span>
+                                </figcaption>
+                            </figure>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+        </section>
+    
         
 </div>

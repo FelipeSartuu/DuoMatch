@@ -10,16 +10,19 @@
 </head>
 <body>
     <header>
-        <nav class="meu-pau">
+        <nav class="navbar">
             <ul>
-                <li id="meu-pau-logo"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></li>
-                {{#if session.userid}}
-                    <li><a href="/posts/meusposts">Meus Posts</a></li>
-                    <li><a href="/logout">Sair</a></li>
-                {{else}}
-                    <li class="meu-pau-login"><a href="/login">Login</a></li>
-                    <li class="meu-pau-login"><a href="/register">Registrar</a></li>
-                {{/if}}
+                <li id="nav-logo"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></li>
+
+                <div class="login-link"> 
+                    {{#if session.userid}}
+                        <li><a href="/posts/meusposts">Meus Posts</a></li>
+                        <li><a href="/logout">Sair</a></li>
+                    {{else}}
+                        <li class="meu-login"><a href="/login">Login</a></li>
+                        <li class="meu-login"><a href="/register">Registrar</a></li>
+                    {{/if}}
+                </div>
 
             </ul>
         </nav>

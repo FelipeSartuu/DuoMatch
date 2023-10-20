@@ -11,11 +11,11 @@ body {
 }
 
 /* logo do site na navbar */
-#meu-pau-logo img {                 
+#nav-logo img {                 
     max-width: 50px;
     max-height: 50px;
 }
-#meu-pau-logo {
+#nav-logo {
     display: flex;
     flex-grow: 2; 
 }
@@ -23,35 +23,40 @@ body {
 
 
 /* parte de login e register da navbar */
-.meu-pau ul {
+.navbar ul {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 3%;
     background-color: rgba(45, 8, 98, 0.846);
     list-style: none;
     align-items: center;
+
 }
-.meu-pau a {
+
+.navbar a {
     text-decoration: none;
     font-weight: 700;
     font-size: 22px;
     font-family: 'Roboto';
-    color: black;
-    
+    color: white;  
 } 
-.meu-pau-login {
+
+.meu-login {
     margin-left: 30px;
 }
 
-
+.login-link {
+    display: flex;
+    gap: 30px;
+}
 
 /* container principal da tela de LOGIN e de REGISTER */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
     flex-direction: column;
+    height: calc(100vh - 80px);
    
 }
 /* Titulo tanto do LOGIN e do REGISTER */
@@ -267,10 +272,8 @@ i {
 /* estilizacao da pagina home */
 /* div q engloba tudo da pagina home */
 .container-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
+
+    padding-top: 75px;
 }
 
 
@@ -287,9 +290,7 @@ i {
 .container-pesquisa {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     align-items: center;
-    padding-left: 5%;
 }
 /* h1 que fica em cima da barra de pesquisa */
 .container-pesquisa h1 {
@@ -297,17 +298,17 @@ i {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 35px;
+
 }
 /* span usado pra destacar a palavra POSTS do h1 */
 #span-posts {
-    color: aqua;
+    color: #B4208C
 }
 /* IDS usados pra estilizar a propria barra de pesquisa */
 #container-inputs {
     display: flex;
-    padding-top: 15px;
-    border-top: 2px solid white;
-    margin: 10px;
+
+    
     gap: 5px;
     align-items: center;
 }
@@ -345,9 +346,10 @@ i {
 #input-wrapper input:focus-visible {
     outline: none;
 }
-#input-wrapper:hover {
-    box-shadow: 0px 0px 4px 2px blue;    
-}
+
+.input #input-wrapper {
+    border: 2px solid #B4208C;
+  }
 
 
 
@@ -356,12 +358,8 @@ i {
 /* container que fica a partde de ordenar os posts, ta la no canto direito */
 .container-ordenar {
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    margin-right: 20px;
     align-items: center;
     font-family: 'Roboto';
-    font-weight: 700;
     color: white;
 }
 #seila {
@@ -369,7 +367,7 @@ i {
     align-items: center;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 3px;
+    padding: 0px 10px;
 }
 /* container do botao */
 .container-ordenar button {
@@ -377,3 +375,57 @@ i {
     border: none;
     cursor: pointer;
 }
+
+.input-order-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.posts-container {
+    width: 100%;
+}
+
+.posts-area {
+    padding: 0px 300px;
+    margin: 75px 30px 0px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    text-decoration: none;
+}
+
+.post-individual {
+    padding: 15px 4px;
+    
+    background: linear-gradient(360deg, #B4208C, #28294b);
+    margin-bottom: 10px;
+    height: 200px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 400;
+    border: 2px solid #B4208C;
+}
+
+.posts-area a {
+    text-decoration: none;
+    color: rgb(210, 210, 210)
+    /*color: rgb(255, 176, 137)*/
+}
+
+
+.post-title {
+    font-size: 1.5em;
+}
+
+.post-game {
+    font-size: 1.45em;
+    padding: 30px 0px;
+}
+
