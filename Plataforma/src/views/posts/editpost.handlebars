@@ -1,29 +1,34 @@
-<div>
+<div class="">
+    <div>
+        <h1>Editando o Post</h1>
+    </div>
+
     <a href="/posts/meusposts">Voltar</a>
-    <h1>Editando o Post</h1>
 
     <form action="/posts/edit" method="POST">
     <input type="hidden" name="id" value="{{post.id}}">
         <div class="form-control">
             <label for="title">Título</label>
-            <input type="text" name="title" placeholder="Digite um título" value="{{post.title}}">
+            <input type="text" name="title" placeholder="Digite um título" value="{{post.title}}" maxlength="30" required>
         </div>
 
         <div class="form-control">
             <label for="game">Jogo</label>
-            <input type="text" name="game" placeholder="Digite o nome do jogo" value="{{post.game}}">
+            <input type="text" name="game" placeholder="Digite o nome do jogo" value="{{post.game}}"  maxlength="35" required>
         </div>
 
         <div class="form-control">
             <label for="horario">Disponibilidade</label>
-            <input type="text" name="horario" placeholder="Digite sua disponibilidade para jogar" value="{{post.horario}}">
+            <input type="text" name="horario" placeholder="Digite sua disponibilidade para jogar" value="{{post.horario}}" required>
         </div>
 
         <div class="form-control">
             <label for="desc">Descrição</label>
-            <input type="text" name="desc" placeholder="Crie uma descrição para a postagem" value="{{post.desc}}">
+            <input type="text" name="desc" placeholder="Crie uma descrição para a postagem" value="{{post.desc}}" maxlength="350" required  >
         </div>
 
         <input type="submit" value="Editar post">
     </form>
+
+    
 </div>

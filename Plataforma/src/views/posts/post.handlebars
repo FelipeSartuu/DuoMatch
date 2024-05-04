@@ -1,18 +1,43 @@
-{{#each posts}}
-    <a href="/">Voltar</a>
+{{#each posts}}  
+<div class="createpost-title-container fonte">
+    <a href="/"><i class="fa-solid fa-share fa-flip-horizontal" style="color: #7b057e;"></i></a>
+    <div class="createpost-title fonte">
+        <h1>EXIBIÇÃO DO POST DE <span>{{this.user.name}}</span></h1>
+    </div>
+</div>
 
+
+<div class="container-post fonte">
+  
+    <div class="post-card">
+        <h1>{{this.title}}</h1>
+        <div class="child-post-card">
+            
+            <div class="post-description">
+                <h2 class="post-input-wrapper">Jogo:{{this.game}}</h2>
+                <p class="post-input-wrapper">Disponibilidade:{{this.horario}}</p>
+            </div>
+            <div id="post-description">
+                <p id="post-input-wrapper">Descrição: {{this.desc}}</p>
+            </div>
+            
+            <hr>
+            <div class="container-post-user">
+                <div class="post-user">    
+                    <p>Name: {{this.user.name}}</p>
+                    <p>Discord: {{this.user.contact}}</p>
+                    <p>Idade: {{this.user.age}}</p>
+                    <br>         
+                </div>
+            </div>
+            
+        </div>
+       
+
+        
+    </div>
+   
+</div>
     
-    <h1>{{this.title}}</h1>
-    <h2>Jogo: {{this.game}}</h2>
-    <p>{{this.desc}}</p>
-    <p>Disponibilidade para jogar: {{this.horario}}</p>
-    <br>
-
-    <p>Name: {{this.user.name}}</p>
-    <p>Discord: {{this.user.contact}}</p>
-    <p>Idade: {{this.user.age}}</p>
-    <p>Sex: {{this.user.sex}}</p>
-    <br>
-    <hr>
 {{/each}}
 

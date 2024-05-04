@@ -61,12 +61,7 @@ module.exports = class HomeController {
             user: { name: post['User.name'], 
             contact:  post['User.contact'], 
             age: post['User.age'],
-            sex: post["User.sex"],
         }}))
-
-        
-        console.log(novosPosts)
-
 
         res.render('posts/post', { posts: novosPosts})
     }

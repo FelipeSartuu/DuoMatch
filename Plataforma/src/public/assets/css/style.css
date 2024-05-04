@@ -6,54 +6,78 @@
     box-sizing: border-box;
 }
 
+.fonte {
+    color: #3C1A7D;
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
 body {
-    background-color: #28294b;
+    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+    min-height: 100vh;
 }
 
 /* logo do site na navbar */
-#meu-pau-logo img {                 
+#nav-logo img {                 
     max-width: 50px;
     max-height: 50px;
 }
-#meu-pau-logo {
+#nav-logo {
     display: flex;
     flex-grow: 2; 
 }
 
-
-
 /* parte de login e register da navbar */
-.meu-pau ul {
+.navbar ul {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 3%;
     background-color: rgba(45, 8, 98, 0.846);
     list-style: none;
     align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
-.meu-pau a {
+
+.navbar a {
     text-decoration: none;
     font-weight: 700;
     font-size: 22px;
     font-family: 'Roboto';
-    color: black;
-    
+    color: white;  
 } 
-.meu-pau-login {
+
+.meu-login {
     margin-left: 30px;
+}
+
+.login-link {
+    display: flex;
+    gap: 30px;
 }
 
 
 
+
+
+
+
+
+
+
+
+/*---------------------- REGISTER ---------------------- */
 /* container principal da tela de LOGIN e de REGISTER */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
     flex-direction: column;
+    height: calc(100vh - 80px);
    
 }
+
 /* Titulo tanto do LOGIN e do REGISTER */
 .auth-container h2 {
     padding: 10px;
@@ -63,11 +87,8 @@ body {
     box-shadow: 0 6px 6px -6px rgba(255, 255, 255, 0.5);
 }
 
-
-
-
 /* div q engloba tudo da Tela de REGISTER */
-.pauzinho {
+.register-main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +97,7 @@ body {
     color: white;
     font-family: 'Roboto';
     font-weight: 700;
-    background-color: rgba(171, 185, 224, 0.3);
+    background-color: #533d8b;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -85,15 +106,12 @@ body {
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-
-
 /* container que engloba tudo que serve pra se registrar tirando o botao de cadastro e ja tem conta */
 .container-registrar {
     padding: 20px;
     display: flex;
     padding-bottom: 30px;
 }
-
 
 /* Controle dos formularios das telas de LOGIN e de REGISTER */
 .form-control {
@@ -102,11 +120,11 @@ body {
     flex-direction: column;
 }
 
-
 /* Id do formulario de masculino/Feminino */
 #form-control {
     padding-bottom: 15px;
 }
+
 /* divs pra estilizar o os botoes do masculino/feminino */
 .radio-wrapper input[type="radio"] {
     appearance: none;
@@ -115,8 +133,8 @@ body {
     width: 1rem;
     border-radius: 50%;
     background-color: white;
-   
 }
+
 .radio-wrapper input[type="radio"]:checked {
     border: 3px solid #7a0baeda;
 }
@@ -125,28 +143,28 @@ body {
     margin-top: 10px;
 }
 
-
-
-
-
 /* Uma div usada pra colocar os itens do formularios lado a lado */
 .form-quebra {
     display: flex;
 }
+
 /* Uma div usada pra colocar os itens do formularios lado a lado, divs filhos que separam em 2 conteudos */
+
 .form-quebra1 {
     padding-left: 30px;
 }
-
-
 
 /* Estilização do Botão de cadastrar */
 .cadastrar-bottom {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
+    align-items: center;
 }
+
+
 .cadastrar-bottom input {
+    width: 300px;
     margin-bottom: 10px;
     border-radius: 9px;
     border: none;
@@ -155,17 +173,28 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+
 .cadastrar-bottom input:hover {
     cursor: pointer;
 }
+
 .cadastrar-bottom a {
     text-decoration: none;
-    color: black;
+    color: #B4208C;
 }
 
 
-/* Div que engloba tudo sobre a tela de LOgin */
-.pauzao {
+
+
+
+
+
+
+
+
+
+/*---------------------- LOGIN ---------------------- */
+.login-main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +203,7 @@ body {
     color: white;
     font-family: 'Roboto';
     font-weight: 700;
-    background-color: rgba(171, 185, 224, 0.3);
+    background-color: #533d8b;
     padding: 20px;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -191,19 +220,18 @@ body {
     align-items: center;
 }
 
-
-
 .container-login label {
     padding-top: 10px;
 }
-
 
 /* div pra separar o botao e o n tem conta do email e senha */
 .container-divisao-login {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    text-align: center;
 }
+
 .container-divisao-login input {
     margin-bottom: 10px;
     border-radius: 9px;
@@ -215,22 +243,21 @@ body {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.195);
 }
 
-
-
-
 /* usado pra estilizar todos os inputs do LOGIN e do REGISTER */
 .input-wrapper  {
-    background-color: rgba(255, 255, 255, 0.527);
+  background: linear-gradient(90deg, #533D8B, rgb(171, 137, 232));
+    border: 2px solid #533d8b;
     padding: 7px;
-    border-radius: 14px;
+    border-radius: 20px;
     display: flex;
-    gap: 4px;
     align-items: center;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 5.5px 4px rgba(0, 0, 0, 0.06),
     0 10px 8px rgba(0, 0, 0, 0.12);
+    width: 300px;
 }
+
 .input-wrapper input {
     width: 91%;
     background-color: transparent;
@@ -238,18 +265,19 @@ body {
     color: white;
     cursor: text;
 }
+
 .input-wrapper input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: #cfced4db;
 }
+
 .input-wrapper input:focus-visible {
     outline: none;
 }
+
 .input-wrapper i {
     border-right: 2px solid white;
     padding-right: 5px;
 }
-
-
 
 .form-control label {
     padding-left: 5px;
@@ -259,18 +287,24 @@ i {
     margin: 2px;
 }
 
+.container-divisao-login a {
+    text-decoration: none;
+    color: #B4208C;
+}
 
 
 
 
 
-/* estilizacao da pagina home */
+
+
+
+
+/* ---------------------- HOME ----------------------*/
+
 /* div q engloba tudo da pagina home */
 .container-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
+    padding-top: 75px;
 }
 
 
@@ -281,38 +315,61 @@ i {
 }
 
 
-
+.logout a {
+    color: rgba(177, 39, 39, 0.873); 
+}
 
 /* container que contem a barra de pesquisa */
 .container-pesquisa {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     align-items: center;
-    padding-left: 5%;
 }
 /* h1 que fica em cima da barra de pesquisa */
 .container-pesquisa h1 {
-    color: white;
+    color: rgba(62, 36, 149, 0.894);
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 35px;
+
 }
+
+.container-pesquisa h1 { 
+    border-right: 4px solid #9EA1CA;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-iteration-count: infinite;
+    animation: typing 2.3s steps(30), blinking 0.5s infinite step-end alternate;
+}
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
 /* span usado pra destacar a palavra POSTS do h1 */
 #span-posts {
-    color: aqua;
+    color: #942185
 }
+
 /* IDS usados pra estilizar a propria barra de pesquisa */
 #container-inputs {
-    display: flex;
-    padding-top: 15px;
-    border-top: 2px solid white;
-    margin: 10px;
+    display: flex; 
     gap: 5px;
     align-items: center;
 }
+
 #input-wrapper {
-    background-color: rgba(255, 255, 255, 0.527);
+    background: linear-gradient(90deg, #533D8B, rgb(171, 137, 232));
+    border: 2px solid #533d8b;
     padding: 7px;
     border-radius: 20px;
     display: flex;
@@ -323,6 +380,7 @@ i {
     0 10px 8px rgba(0, 0, 0, 0.12);
     width: 400px;
 }
+
 #input-wrapper input {
     width: 91%;
     background-color: transparent;
@@ -330,46 +388,48 @@ i {
     color: white;
     cursor: text;
 }
+
 #input-wrapper i {
     border-left: 2px solid rgba(255, 255, 255, 0.565);
     padding-left: 5px;
 }
+
 #input-wrapper button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
+
 #input-wrapper input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.817);
+    font-weight: 700;
 }
-#input-wrapper input:focus-visible {
+
+#input-wrapper input:focus-visible{
     outline: none;
 }
-#input-wrapper:hover {
-    box-shadow: 0px 0px 4px 2px blue;    
+
+#input-wrapper input:focus-visible #input-wrapper{
+    border: 2px solid #00186c;
 }
 
-
-
-
+.input #input-wrapper {
+    border: 2px solid #B4208C;
+  }
 
 /* container que fica a partde de ordenar os posts, ta la no canto direito */
 .container-ordenar {
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    margin-right: 20px;
     align-items: center;
     font-family: 'Roboto';
-    font-weight: 700;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 #seila {
     display: flex;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
-    padding: 3px;
+    padding: 0px 10px;
 }
 /* container do botao */
 .container-ordenar button {
@@ -377,3 +437,426 @@ i {
     border: none;
     cursor: pointer;
 }
+
+.input-order-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.posts-container {
+    width: 100%;
+}
+
+.posts-area {
+
+    margin: 75px 30px 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+}
+
+.post-individual {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 6px;
+    width: 350px;
+    background: linear-gradient(360deg, #533D8B, rgb(171, 137, 232));
+    margin-bottom: 10px;
+    height: 200px;
+    word-wrap: break-word;
+    border-radius: 7px;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 400;
+    border: 2px solid #B4208C;
+    color: whitesmoke;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    transition: 0.4s;
+}
+
+.post-individual:hover {
+    transform: translateY(-20px);
+}
+
+.post-individual figure {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    word-break: break-all;
+}
+
+.posts-area a {
+    text-decoration: none;
+    color: rgb(210, 210, 210)
+    /*color: rgb(255, 176, 137)*/
+}
+
+
+.post-title {
+    font-size: 1.5em;
+}
+
+.post-game {
+    font-size: 1.45em;
+}
+
+
+
+
+
+
+
+/*---------------------- MEUS POSTS ----------------------*/
+
+.mypost-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+  
+}
+
+.mypost-title span {
+    color: #B4208C;
+}
+
+.mypost-create-post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(42, 43, 51);
+    border-radius: 50%; 
+    box-shadow: 0 0 20px #d914a5;
+    transition: 0.4s;
+}
+
+.mypost-create-post:hover {
+    transform: scale(1.1) rotate(90deg);
+   
+    cursor: pointer;
+}
+
+.mypost-create-post-container a  .create-post:hover {
+    transform: scale(1.2);
+}
+
+.mypost-create-post-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.post-abbreviation {
+    text-decoration: none;
+}
+
+
+.mypost-title {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    font-size: 1.5em;
+}
+
+.post-trash {
+    background-color: transparent;
+    border: none;
+}
+
+.utilidades-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.utilidades-buttons i {
+    transition: 0.25s;
+}
+
+.utilidades-buttons i:hover {
+    cursor: pointer;
+    transform: translateY(-5px) scale(1.05);
+}
+
+.sem-post {
+    color: #B4208C;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    height: 78vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.sem-post a {
+    text-decoration: none;
+
+}
+
+.sem-post p {
+    border-right: 3px solid #9EA1CA;
+    width: 46ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-iteration-count: infinite;
+    animation: typing 1.9s steps(40), blinking 0.6s infinite step-end alternate;
+}
+
+/* ---------------CREATE POST ------------------ */
+.createpost-title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.createpost-title-container i {
+    font-size: 30px;
+
+}
+
+.createpost-title{
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    width: 92%;
+}
+
+.createpost-title span {
+    color: #B4208C;
+}
+
+.create-section {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-container {
+    background: #533D8B;
+    width: 800px;
+    padding: 30px;
+    min-height: 650px;
+    color: white;
+    font-family: "Roboto";
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-title .form-control {
+    text-align: center;
+}
+
+.card-title .form-control label {
+    margin-bottom: 8px;
+    font-size: 1.35em;
+}
+
+.card-title .form-control input {
+    width: 250px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+}
+
+.card-down {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+}
+
+.card-game {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.card-horario {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.card-desc {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.card-desc {
+    height: 50px;
+}
+
+
+
+.card-top-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-bar {
+    width: 90%;
+    background-color: whitesmoke;
+    height: 3px;
+}
+
+.button-createpost {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button-createpost input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid #533D8B;
+    background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+    color: #00186c;
+    margin-top: 20px;
+}
+
+
+/* ------------ POST ---------------- */
+
+.container-post {
+    display: flex;
+    height: 89vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.post-card {
+    background-color: #533D8B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 650px;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+.post-card h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 5%;
+}
+
+.child-post-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+}
+
+.child-post-card hr {
+    margin-top: 0%;
+}
+
+.post-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.post-description h2 {
+    font-size: 20px;
+}
+
+#post-description {
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+    margin-bottom: 10%;
+}
+
+.post-user {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 90px;
+}
+
+.container-post-user {
+    display: flex;
+    justify-content: center;
+
+}
+
+.post-input-wrapper {
+    background: linear-gradient(90deg, #533D8B, rgb(171, 137, 232));
+    border: 2px solid #533d8b;
+    padding: 7px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 5.5px 4px rgba(0, 0, 0, 0.06),
+    0 10px 8px rgba(0, 0, 0, 0.12);
+    width: 250px;
+}
+
+#post-input-wrapper {
+    background: linear-gradient(90deg, #533D8B, rgb(171, 137, 232));
+    border: 2px solid #533d8b;
+    padding: 7px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 5.5px 4px rgba(0, 0, 0, 0.06),
+    0 10px 8px rgba(0, 0, 0, 0.12);
+    width: 100%;
+}
+
+.createpost-title-container span {
+    color: #B4208C;
+}
+
+.p-results {
+    color: #3C1A7D;
+    font-family: "roboto";
+}
+

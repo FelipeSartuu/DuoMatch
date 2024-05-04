@@ -31,10 +31,27 @@ module.exports = class HomeController {
         res.render("posts/mypost", {posts, emptyPosts, userName})
     }
 
+
+
     static async createPost(req, res) {
 
+        
+       // const userId = req.session.id
+
+       // const user = await User.findOne({
+       //     where: {
+       //         id: userId
+       //     },
+       //     plain: true   
+       // })
+
+       //let userName = user.name
+       //let userContact = user.contact
+       //let userAge = user.age
         res.render("posts/createpost")
     }
+
+
 
     static async createPostSave(req, res) {
 
@@ -50,7 +67,7 @@ module.exports = class HomeController {
         //Criando um novo post no banco de dados passando o objeto
         await Post.create(post)
 
-        
+            
         //
         try {
             req.flash("message", "Post criado com sucesso!")

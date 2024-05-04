@@ -1,29 +1,84 @@
 <div>
-    <a href="/posts/meusposts">Voltar</a>
-    <h1>Criar um Post</h1>
-
-    <form action="/posts/criar" method="POST">
-
-        <div class="form-control">
-            <label for="title">Título</label>
-            <input type="text" name="title" placeholder="Digite um título">
+    <div class="createpost-title-container fonte">
+        <a href="/posts/meusposts"><i class="fa-solid fa-share fa-flip-horizontal" style="color: #7b057e;"></i></a>
+        <div class="createpost-title fonte">
+            <h1>CRIAR UM <span>POST</span></h1>
         </div>
+    </div>
+    
+   
+    
 
-        <div class="form-control">
-            <label for="game">Jogo</label>
-            <input type="text" name="game" placeholder="Digite o nome do jogo">
-        </div>
 
-        <div class="form-control">
-            <label for="horario">Disponibilidade</label>
-            <input type="text" name="horario" placeholder="Digite sua disponibilidade para jogar">
-        </div>
 
-        <div class="form-control">
-            <label for="desc">Descrição</label>
-            <input type="text" name="desc" placeholder="Crie uma descrição para a postagem">
-        </div>
 
-        <input type="submit" value="Criar post">
-    </form>
-</div>
+
+
+    <section class="create-section">
+            <form action="/posts/criar" method="POST">
+                <div class="card-container">
+
+                    <div class="card-top-area">
+                        <div class="card-up">
+                            <div class="card-title">
+                                <div class="form-control">
+                                    <label for="title">TÍTULO</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-thumbtack" style="color: #ffffff;"></i>
+                                        <input type="text" name="title" placeholder="Digite um título"  maxlength="30" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-down">
+                            <div class="card-game">
+                                <div class="form-control">
+                                    <label for="game">Jogo</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-gamepad" style="color: #ffffff;"></i>
+                                        <input type="text" name="game" placeholder="Digite o nome do jogo" maxlength="35" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-horario">
+                                <div class="form-control">
+                                    <label for="horario">Disponibilidade</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-hourglass-end" style="color: #ffffff;"></i>
+                                        <input type="text" name="horario" placeholder="Digite sua disponibilidade para jogar" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-desc">
+                                <div class="form-control">
+                                    <label for="desc">Descrição</label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-comment-dots" style="color: #ffffff;"></i>
+                                        <input type="text" name="desc" placeholder="Crie uma descrição para a postagem" maxlength="350" >
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <div class="create-bar"></div>
+
+                    <h3></h3>
+
+
+
+                </div>
+                <div class="button-createpost">
+                    <input class="fonte" type="submit" value="CRIAR POST">
+                </div>
+               
+            </form>
+
+            
+                
+    </section>
+ 
+
+    
+</div>    
