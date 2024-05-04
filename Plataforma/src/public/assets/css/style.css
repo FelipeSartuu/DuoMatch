@@ -65,8 +65,6 @@ body {
 
 
 
-
-
 /*---------------------- REGISTER ---------------------- */
 /* container principal da tela de LOGIN e de REGISTER */
 .auth-container {
@@ -304,6 +302,7 @@ i {
 
 /* div q engloba tudo da pagina home */
 .container-home {
+
     padding-top: 75px;
 }
 
@@ -357,12 +356,15 @@ i {
 
 /* span usado pra destacar a palavra POSTS do h1 */
 #span-posts {
-    color: #942185
+    color: #942185;
+    color: #B4208C;
 }
 
 /* IDS usados pra estilizar a propria barra de pesquisa */
 #container-inputs {
     display: flex; 
+
+    display: flex;
     gap: 5px;
     align-items: center;
 }
@@ -417,12 +419,17 @@ i {
     border: 2px solid #B4208C;
   }
 
+.input #input-wrapper {
+    border: 2px solid #B4208C;
+  }
+
 /* container que fica a partde de ordenar os posts, ta la no canto direito */
 .container-ordenar {
     display: flex;
     align-items: center;
     font-family: 'Roboto';
     color: rgb(0, 0, 0);
+    color: white;
 }
 #seila {
     display: flex;
@@ -450,17 +457,24 @@ i {
 }
 
 .posts-area {
-
     margin: 75px 30px 0px 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    padding: 0px 300px;
+    margin: 75px 30px 0px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
     text-decoration: none;
 }
 
 .post-individual {
+
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -473,10 +487,23 @@ i {
     height: 200px;
     word-wrap: break-word;
     border-radius: 7px;
+
+    padding: 15px 4px;
+    
+    background: linear-gradient(360deg, #B4208C, #28294b);
+    margin-bottom: 10px;
+    height: 200px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
     font-family: "Roboto";
     font-weight: 400;
     border: 2px solid #B4208C;
+
+
     color: whitesmoke;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -858,5 +885,6 @@ i {
 .p-results {
     color: #3C1A7D;
     font-family: "roboto";
+    padding: 30px 0px;
 }
 
