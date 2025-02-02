@@ -23,7 +23,7 @@ O desenvolvimento do DuoMatch contou com o uso das seguintes tecnologias e ferra
 - **Rafael Cruz** - Design
 
 ## 🎥 Demonstração
-Assista ao vídeo de apresentação do projeto aqui: [Link para o vídeo](#)
+Assista ao vídeo de apresentação do projeto aqui: ![Demonstração do DuoMatch](#)  
 
 ---
 
