@@ -22,7 +22,6 @@ O desenvolvimento do DuoMatch contou com o uso das seguintes tecnologias e ferra
 - **Felipe Sartorato** - Desenvolvimento/Programação
 - **Rafael Cruz** - Design
 
-## 🎥 Demonstração
 ## 🎥 Demonstração  
 [Assista ao vídeo de apresentação do DuoMatch aqui!](https://youtu.be/hb9-cVLFgOw)
 
